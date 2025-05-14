@@ -1,0 +1,170 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Himalayan 450 | Royal Enfield</title>
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&display=swap" rel="stylesheet">
+  <style>
+    body {
+      font-family: 'Poppins', sans-serif;
+      margin: 0;
+      padding: 0;
+      background-color: #f4f4f4;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+    }
+
+    header {
+      background: black;
+      color: white;
+      text-align: center;
+      padding: 20px;
+      width: 100%;
+    }
+
+    .logo img {
+      height: 80px;
+      cursor: pointer;
+    }
+
+    .himalayan-hero {
+      text-align: center;
+      color: white;
+      padding: 10px;
+      font-size: 24px;
+      font-weight: bold;
+    }
+
+    .himalayan-content {
+      text-align: center;
+      padding: 40px 20px;
+      background: white;
+      margin: 20px auto;
+      width: 90%;
+      max-width: 800px;
+      border-radius: 10px;
+      box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+    }
+
+    .color-options {
+      text-align: center;
+      margin-top: 20px;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      width: 100%;
+      padding: 20px;
+    }
+
+    .color-label {
+      font-size: 20px;
+      font-weight: bold;
+      margin-bottom: 10px;
+    }
+
+    .bike-display img {
+      width: 80%;
+      max-width: 500px;
+      border-radius: 10px;
+      margin-bottom: 20px;
+      transition: 0.3s ease-in-out;
+    }
+
+    .color-options img {
+       width: 60%;
+        border-radius: 10px;
+        cursor: pointer;
+        transition: transform 0.3s, opacity 0.3s;
+        margin-bottom: 20px;
+    }
+
+    .color-options img:hover {
+      transform: scale(1.05);
+      opacity: 0.85;
+    }
+
+    footer {
+      text-align: center;
+      background: black;
+      color: white;
+      padding: 25px;
+      margin-top: 50px;
+      width: 100%;
+    }
+
+    @media (max-width: 768px) {
+      .color-options img,
+      .bike-display img {
+        width: 90%;
+      }
+
+      .himalayan-hero {
+        font-size: 20px;
+      }
+    }
+    .home{
+      background:  linear-gradient(135deg, #ff4500, #ff8800);
+       color: white;
+      padding: 10px 20px;
+      border-radius: 10px;
+      font-size: 16px;
+      text-decoration: none;
+      transition: transform 0.3s, background 0.3s;
+      box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+    }
+  </style>
+</head>
+<body>
+  <header>
+    <div class="logo">
+      <a href="index.html">
+        <img src="assests/image2.png" alt="Royal Enfield Logo">
+      </a>
+    </div>
+    <div class="himalayan-hero">
+      <h2>Himalayan 450</h2>
+      <p>Built for adventure, designed for endurance.</p>
+    </div>
+  </header>
+
+  <section class="himalayan-content">
+    <h2>Royal Enfield Himalayan 450</h2>
+    <p>The Royal Enfield Himalayan 450 is a perfect blend of rugged capability and modern features, 
+      making it an ideal choice for adventure enthusiasts.</p>
+
+    <!-- Main Display Image -->
+   
+  </section>
+
+  <section class="color-options">
+    <h2>Available Colors</h2>
+
+    <div class="color-label">Himalayan 450 Black</div>
+    <a href="sign.html">
+      <img src="assests/img6.jpg" alt="Himalayan 450 Black" onclick="changeImage('assests/img6.jpg')">
+    </a>
+
+    <div class="color-label">Himalayan 450 White</div>
+    <a href="sign.html">
+      <img src="assests/img7.jpg" alt="Himalayan 450 White" onclick="changeImage('assests/img7.jpg')">
+    </a>
+    <div class="home">
+    <a href="index.html" class="home-button">Back to Home</a>
+    </div>
+
+    
+  </section>
+
+  <footer>
+    <p>&copy; 2025 Royal Enfield. All Rights Reserved.</p>
+  </footer>
+
+  <script>
+    function changeImage(imageSrc) {
+      document.getElementById('main-bike').src = imageSrc;
+    }
+  </script>
+</body>
+</html>

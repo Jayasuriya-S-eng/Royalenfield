@@ -1,0 +1,194 @@
+/* ========== Reset and Base ========== */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    background-color: #f9f9f9;
+    color: #333;
+    line-height: 1.6;
+}
+
+img {
+    max-width: 100%;
+    display: block;
+}
+
+a {
+    text-decoration: none;
+    color: inherit;
+    transition: color 0.3s ease;
+}
+
+ul {
+    list-style: none;
+}
+
+/* ========== Header ========== */
+header {
+    background-color: #1f1f1f;
+    padding: 20px 40px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.logo img {
+    height: 50px;
+}
+
+nav ul {
+    display: flex;
+    gap: 30px;
+}
+
+nav a {
+    color: #fff;
+    font-weight: 500;
+    font-size: 17px;
+}
+
+nav a:hover {
+    color: #ccc;
+    text-decoration: underline;
+}
+
+/* ========== Hero Section ========== */
+.contact-hero {
+    background: linear-gradient(to right, #ffffff, #f1f1f1);
+    padding: 80px 20px 60px;
+    text-align: center;
+}
+
+.contact-hero h1 {
+    font-size: 38px;
+    margin-bottom: 10px;
+    color: #222;
+}
+
+.contact-hero p {
+    font-size: 18px;
+    color: #666;
+}
+
+/* ========== Contact Info Section ========== */
+.contact-info {
+    padding: 60px 40px;
+    background-color: #fff;
+}
+
+.contact-container {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 40px;
+    justify-content: space-between;
+}
+
+.contact-details,
+.contact-form {
+    flex: 1 1 45%;
+    background-color: #fefefe;
+    padding: 30px;
+    border-radius: 10px;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.06);
+}
+
+/* Contact Details */
+.contact-details h2,
+.contact-form h2 {
+    font-size: 26px;
+    margin-bottom: 20px;
+    color: #111;
+}
+
+.contact-details p {
+    font-size: 16px;
+    color: #555;
+    margin-bottom: 15px;
+}
+
+.contact-details img {
+    margin-top: 20px;
+    border-radius: 10px;
+}
+
+/* Google Map */
+#map {
+    height: 300px;
+    margin-top: 20px;
+    border-radius: 10px;
+    background-color: #e2e2e2;
+}
+
+/* Contact Form */
+form label {
+    display: block;
+    font-size: 15px;
+    margin-bottom: 6px;
+    color: #444;
+}
+
+form input,
+form textarea {
+    width: 100%;
+    padding: 12px;
+    margin-bottom: 20px;
+    border: 1px solid #ccc;
+    border-radius: 6px;
+    font-size: 15px;
+    background-color: #fefefe;
+}
+
+form textarea {
+    resize: vertical;
+}
+
+form button {
+    background-color: #1f1f1f;
+    color: white;
+    border: none;
+    padding: 12px 24px;
+    border-radius: 6px;
+    font-size: 16px;
+    cursor: pointer;
+    transition: background 0.3s ease;
+}
+
+form button:hover {
+    background-color: #444;
+}
+
+/* ========== Footer ========== */
+footer {
+    background-color: #1f1f1f;
+    color: white;
+    text-align: center;
+    padding: 20px;
+    font-size: 14px;
+}
+
+/* ========== Responsive ========== */
+@media (max-width: 768px) {
+    .contact-container {
+        flex-direction: column;
+    }
+
+    .contact-details,
+    .contact-form {
+        flex: 1 1 100%;
+    }
+
+    header {
+        flex-direction: column;
+        align-items: flex-start;
+    }
+
+    nav ul {
+        margin-top: 15px;
+        flex-direction: column;
+        gap: 10px;
+    }
+}

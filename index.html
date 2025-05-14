@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Royal Enfield | Official Website</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <header>
+        <div class="logo">
+            <img src="assests/image2.png" alt="Royal Enfield Logo">
+        </div>
+        <nav>
+            <ul>
+                <button><li><a href="about.html">About</a></li></button>
+              
+                <button><li><a href="contact.html">Contact</a></li></button>
+            </ul>
+        </nav>
+    </header>
+
+    <section class="hero">
+        <div class="hero-content">
+            <p class="quote">“Four wheels move the body, two wheels move the soul.”</p>
+            <h2>Ride the Legend</h2>
+            <p>Experience the thrill of the open road with Royal Enfield.</p>
+            <button id="explore-btn">Explore Models</button>
+            <p class="quote">“The road is calling, and I must go.”</p>
+        </div>
+    </section>
+
+    <section class="models" id="models">
+        <h2>Our Models</h2>
+        <div class="model-list">
+            <a href="classic.html">
+                <div class="model">
+                    <h3>Classic 350</h3>
+                </div>
+            </a>
+            <a href="himalayan.html">
+                <div class="model">
+                    <h3>Himalayan 411</h3>
+                </div>
+            </a>
+            <a href="meteror.html">
+                <div class="model">
+                    <h3>Meteor 350</h3>
+                </div>
+            </a>
+        </div>
+    </section>
+
+    <footer>
+        <p>&copy; 2025 Royal Enfield. All Rights Reserved.</p>
+    </footer>
+
+    <script>
+        document.getElementById('explore-btn').addEventListener('click', function () {
+            window.location.href = "#models";
+        });
+    </script>
+</body>
+</html>

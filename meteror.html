@@ -1,0 +1,129 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Meteor 350 | Royal Enfield</title>
+    <link rel="stylesheet" href="styles.css">
+    <script defer src="script.js"></script>
+    <style>
+        body {
+            font-family: 'Poppins', sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #f4f4f4;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+        }
+        header {
+            background: black;
+            color: white;
+            text-align: center;
+            padding: 20px;
+            width: 100%;
+        }
+        .logo img {
+            height: 80px;
+        }
+        .meteor-hero {
+            text-align: center;
+            color: white;
+            padding: 20px;
+            font-size: 24px;
+            font-weight: bold;
+        }
+        .meteor-content {
+            text-align: center;
+            padding: 50px;
+            background: white;
+            margin: 20px auto;
+            width: 80%;
+            border-radius: 10px;
+            box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+        }
+        .color-options {
+            text-align: center;
+            margin-top: 20px;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            width: 100%;
+            padding: 20px;
+        }
+        .color-options img {
+            width: 60%;
+            border-radius: 10px;
+            cursor: pointer;
+            transition: transform 0.3s, opacity 0.3s;
+            margin-bottom: 20px;
+        }
+        .color-options img:hover {
+            transform: scale(1.1);
+            opacity: 0.8;
+        }
+        .color-label {
+            font-size: 20px;
+            font-weight: bold;
+            margin-bottom: 10px;
+        }
+        footer {
+            text-align: center;
+            background: black;
+            color: white;
+            padding: 25px;
+            margin-top: 50px;
+            width: 100%;
+        }
+        .home{
+        background:  linear-gradient(135deg, #ff4500, #ff8800);
+        color: white;
+        padding: 10px 20px;
+        border-radius: 10px;
+        font-size: 16px;
+        text-decoration: none;
+        transition: transform 0.3s, background 0.3s;
+        box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+    }
+    </style>
+</head>
+<body>
+    <header>
+        <div class="logo">
+            <img src="assests/image2.png" alt="Royal Enfield Logo">
+        </div>
+        <div class="meteor-hero">
+            <h2>Meteor 350</h2>
+            <p>The cruiser that redefines highway comfort and style.</p>
+        </div>
+    </header>
+    <section class="meteor-content">
+        <h2>Royal Enfield Meteor 350</h2>
+        <p>The Royal Enfield Meteor 350 is built for easy cruising, combining a smooth ride with a classic aesthetic and modern engineering.</p>
+    </section>
+    <section class="color-options">
+        <h2>Available Colors</h2>
+        <div class="color-label">Meteor 350 Blue</div>
+        <a href="sign.html">
+       <img src="assests/img9.jpg" alt="Meteor 350 Blue" onclick="changeImage('assets/img10.jpg')"></a>
+        <div class="color-label">Meteor 350 Red</div>
+        <a href="sign.html">
+        <img src="assests/img10.jpg" alt="Meteor 350 Red" onclick="changeImage('assets/img10.jpg')"></a>
+        <div class="color-label">Meteor 350 Black</div>
+        <a href="sign.html">
+        <img src="assests/img11.jpg" alt="Meteor 350 Black" onclick="changeImage('assets/img11.jpg')"></a>
+        <div class="home">
+        <a href="index.html" class="home-button">Back to Home</a>
+        </div>
+
+    </section>
+    <footer>
+        <p>&copy; 2025 Royal Enfield. All Rights Reserved.</p>
+    </footer>
+    <script>
+        function changeImage(imageSrc) {
+            alert('You selected: ' + imageSrc);
+        }
+    </script>
+</body>
+</html>

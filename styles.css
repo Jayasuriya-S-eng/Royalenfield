@@ -1,0 +1,150 @@
+body {
+    font-family: 'Poppins', sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #f4f4f4;
+}
+
+header {
+    background: black;
+    color: white;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 20px 50px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+}
+
+.logo img {
+    height: 80px;
+}
+
+nav {
+    list-style: none;
+    display: flex;
+    gap: 30px;
+    padding: 0;
+    margin: 0;
+}
+
+nav li {
+    display: inline-block;
+}
+
+nav a {
+    text-decoration: none; /* Removes the underline from links */
+    color: white; /* Make sure the text color is white for links */
+    font-size: 16px;
+}
+
+nav button {
+    display: inline-block;
+    background: linear-gradient(135deg, #ff4500, #ff8800);
+    color: white;
+    padding: 10px 20px;
+    border-radius: 10px;
+    font-size: 16px;
+    text-decoration: none;
+    transition: transform 0.3s, background 0.3s;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+}
+
+nav button:hover {
+    transform: scale(1.05);
+    background: darkred;
+}
+
+.hero {
+    text-align: center;
+    background: url(assests/img1.jpg) no-repeat center center/cover;
+    color: white;
+    padding: 250px 20px;
+    font-size: 28px;
+    font-weight: bold;
+    position: relative;
+    height: 100vh;
+}
+
+.hero::after {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.4);
+}
+
+.hero-content {
+    position: relative;
+    z-index: 2;
+}
+
+.quote {
+    font-size: 22px;
+    font-style: italic;
+    margin-bottom: 20px;
+}
+
+.hero button {
+    background: #ff4500;
+    color: white;
+    border: none;
+    padding: 15px 40px;
+    font-size: 20px;
+    cursor: pointer;
+    border-radius: 5px;
+    margin-top: 10px;
+    transition: background 0.3s;
+}
+
+.hero button:hover {
+    background: darkred;
+}
+
+.models {
+    text-align: center;
+    padding: 60px;
+    background: #fff;
+}
+
+.models h2 {
+    font-size: 36px;
+    margin-bottom: 20px;
+}
+
+.model-list {
+    display: flex;
+    justify-content: center;
+    gap: 40px;
+    flex-wrap: wrap;
+}
+
+.model-list a {
+    text-decoration: none;  /* Removes the underline */
+    color: inherit;
+    display: inline-block;
+}
+
+.model {
+    background: linear-gradient(135deg, #ff4500, #ff8800);
+    color: white;
+    padding: 20px;
+    border-radius: 15px;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+    width: 320px;
+    text-align: center;
+    transition: transform 0.3s;
+}
+
+.model:hover {
+    transform: scale(1.05);
+}
+
+footer {
+    background: black;
+    color: white;
+    text-align: center;
+    padding: 25px;
+    margin-top: 50px;
+}

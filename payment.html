@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Royal Enfield Order Page</title>
+  <link rel="stylesheet" href="payment.css" />
+</head>
+<body>
+  <div class="container">
+    <h1>Royal Enfield - Order Your Bike</h1>
+    <form id="orderForm">
+      <label for="model">Select Model:</label>
+      <select id="model" name="model" required>
+        <option value="">-- Choose a Model --</option>
+        <option value="Himalayan">Himalayan</option>
+        <option value="Meteor">Meteor</option>
+        <option value="Classic">Classic</option>
+      </select>
+
+      <label for="name">Full Name:</label>
+      <input type="text" id="name" name="name" required />
+
+      <label for="email">Email:</label>
+      <input type="email" id="email" name="email" required />
+
+      <label for="phone">Phone Number:</label>
+      <input type="tel" id="phone" name="phone" required pattern="[0-9]{10}" />
+
+      <label for="address">Delivery Address:</label>
+      <textarea id="address" name="address" rows="4" required></textarea>
+
+      <button type="submit">Place Order</button>
+    </form>
+    <div id="confirmation" class="hidden">
+      <h2>Thank you for your order!</h2>
+      <p>We will contact you soon with the delivery details.</p>
+      <a href="index.html" class="home-button">Back to Home</a>
+    </div>
+  </div>
+
+  <script>
+    const form = document.getElementById("orderForm");
+    const confirmation = document.getElementById("confirmation");
+
+    form.addEventListener("submit", function (e) {
+      e.preventDefault();
+      form.classList.add("hidden");
+      confirmation.classList.remove("hidden");
+    });
+  </script>
+</body>
+</html>

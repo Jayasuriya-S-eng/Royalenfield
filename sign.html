@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Sign In</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      background:black;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      height: 100vh;
+      margin: 0;
+    }
+
+    .container {
+      background: white;
+      padding: 2rem;
+      border-radius: 12px;
+      box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1);
+      width: 300px;
+      text-align: center;
+    }
+
+    h2 {
+      margin-bottom: 1.5rem;
+      color: #333;
+    }
+
+    input {
+      width: 100%;
+      padding: 10px;
+      margin-bottom: 1rem;
+      border: 1px solid #ccc;
+      border-radius: 8px;
+      font-size: 1rem;
+    }
+
+    .btn-primary {
+      background: linear-gradient(to right, #ff4500, #ff8800);
+      color: white;
+      border: none;
+      padding: 10px;
+      width: 100%;
+      border-radius: 8px;
+      cursor: pointer;
+      font-size: 1rem;
+      transition: opacity 0.3s;
+    }
+
+    .btn-primary:hover {
+      opacity: 0.9;
+    }
+
+    .google-btn {
+      margin-top: 1rem;
+      background: white;
+      color: #555;
+      border: 1px solid #ccc;
+      padding: 10px;
+      width: 100%;
+      border-radius: 8px;
+      cursor: pointer;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-size: 0.95rem;
+      gap: 10px;
+    }
+
+    .google-btn img {
+      width: 18px;
+      height: 18px;
+    }
+  </style>
+</head>
+<body>
+  <div class="container">
+    <h2>Sign In</h2>
+    <input type="text" placeholder="Gmail or Mobile Number" />
+    <input type="text" placeholder="Password" />
+    <a href="payment.html"><button class="btn-primary">Continue</button></a>
+
+    <button class="google-btn">
+      <img src="https://www.svgrepo.com/show/475656/google-color.svg" alt="Google logo" />
+      Continue with Google
+    </button>
+  </div>
+</body>
+</html>

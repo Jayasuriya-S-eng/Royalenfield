@@ -1,0 +1,110 @@
+body {
+    font-family: 'Poppins', sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #f4f4f4;
+}
+
+header {
+    background: black;
+    color: white;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 20px 50px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+}
+
+.logo img {
+    height: 80px;
+}
+
+.nav-links {
+    list-style: none;
+    display: flex;
+    gap: 30px;
+    padding: 0;
+    margin: 0;
+}
+
+.nav-links li {
+    display: inline-block;
+}
+
+.nav-button {
+    display: inline-block;
+    background: linear-gradient(135deg, #ff4500, #ff8800);
+    color: white;
+    padding: 10px 20px;
+    border-radius: 10px;
+    font-size: 16px;
+    text-decoration: none;
+    transition: transform 0.3s, background 0.3s;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+}
+
+.nav-button:hover {
+    transform: scale(1.05);
+    background: darkred;
+}
+
+.hero {
+    background: url(assests/img2.jpg) no-repeat center center/cover;
+    height: 60vh;
+    color: white;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: relative;
+}
+
+.hero::after {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.5);
+}
+
+.hero-content {
+    position: relative;
+    z-index: 1;
+    text-align: center;
+}
+
+.hero-content h1 {
+    font-size: 48px;
+    margin-bottom: 10px;
+}
+
+.hero-content p {
+    font-size: 20px;
+    font-style: italic;
+}
+
+.about-section {
+    padding: 60px 20px;
+    background-color: white;
+    color: #333;
+}
+
+.about-section .container {
+    max-width: 900px;
+    margin: auto;
+    line-height: 1.8;
+}
+
+.about-section h2 {
+    color: #ff4500;
+    margin-top: 30px;
+}
+
+footer {
+    background: black;
+    color: white;
+    text-align: center;
+    padding: 25px;
+    margin-top: 40px;
+}
