@@ -5,6 +5,63 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
   <title>Royal Enfield Order Page</title>
   <link rel="stylesheet" href="payment.css" />
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      background: #f4f4f4;
+      margin: 0;
+      padding: 0;
+    }
+    .container {
+      width: 400px;
+      margin: 50px auto;
+      background: white;
+      border-radius: 10px;
+      padding: 20px;
+      box-shadow: 0 0 10px rgba(0,0,0,0.1);
+    }
+    h1 {
+      text-align: center;
+      color: #b30000;
+    }
+    label {
+      display: block;
+      margin-top: 10px;
+      font-weight: bold;
+    }
+    input, select, textarea {
+      width: 100%;
+      padding: 8px;
+      margin-top: 5px;
+      border: 1px solid #ccc;
+      border-radius: 5px;
+    }
+    button {
+      width: 100%;
+      margin-top: 15px;
+      padding: 10px;
+      background-color: #b30000;
+      color: white;
+      border: none;
+      border-radius: 5px;
+      font-size: 16px;
+      cursor: pointer;
+    }
+    button:hover {
+      background-color: #800000;
+    }
+    .hidden {
+      display: none;
+    }
+    .home-button {
+      display: inline-block;
+      text-decoration: none;
+      background: #333;
+      color: #fff;
+      padding: 10px 20px;
+      border-radius: 5px;
+    }
+  </style>
 </head>
 <body>
   <div class="container">
@@ -32,6 +89,7 @@
 
       <button type="submit">Place Order</button>
     </form>
+
     <div id="confirmation" class="hidden">
       <h2>Thank you for your order!</h2>
       <p>We will contact you soon with the delivery details.</p>
@@ -43,10 +101,34 @@
     const form = document.getElementById("orderForm");
     const confirmation = document.getElementById("confirmation");
 
-    form.addEventListener("submit", function (e) {
+    form.addEventListener("submit", async (e) => {
       e.preventDefault();
-      form.classList.add("hidden");
-      confirmation.classList.remove("hidden");
+
+      const orderData = {
+        model: document.getElementById("model").value,
+        name: document.getElementById("name").value,
+        email: document.getElementById("email").value,
+        phone: document.getElementById("phone").value,
+        address: document.getElementById("address").value
+      };
+
+      try {
+        const response = await fetch("http://localhost:3000/order", {
+          method: "POST",
+          headers: { "Content-Type": "application/json" },
+          body: JSON.stringify(orderData)
+        });
+
+        if (response.ok) {
+          form.classList.add("hidden");
+          confirmation.classList.remove("hidden");
+        } else {
+          alert("Failed to place order. Try again!");
+        }
+      } catch (err) {
+        alert("Error connecting to server!");
+        console.error(err);
+      }
     });
   </script>
 </body>
